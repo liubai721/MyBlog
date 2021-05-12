@@ -18,7 +18,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.validation.Valid;
 
 /**
- * Created by limi on 2020/10/16.
+ * Created by Gene on 2020/10/16.
  */
 
 @Controller
@@ -29,7 +29,7 @@ public class TypeController {
     private TypeService typeService;
 
     @GetMapping("/types")
-    public String types(@PageableDefault(size = 10,sort = {"id"},direction = Sort.Direction.DESC)
+    public String types(@PageableDefault(size = 8,sort = {"id"},direction = Sort.Direction.DESC)
                                     Pageable pageable, Model model) {
         model.addAttribute("page",typeService.listType(pageable));
         return "admin/types";

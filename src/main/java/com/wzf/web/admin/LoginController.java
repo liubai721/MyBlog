@@ -13,7 +13,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.servlet.http.HttpSession;
 
 /**
- * Created by limi on 2020/10/15.
+ * Created by Gene on 2020/10/15.
  */
 @Controller
 @RequestMapping("/admin")
@@ -28,6 +28,10 @@ public class LoginController {
         return "admin/login";
     }
 
+    @GetMapping("register")
+    public String registerPage() {
+        return "admin/regist";
+    }
 
     @PostMapping("/login")
     public String login(@RequestParam String username,
@@ -43,6 +47,19 @@ public class LoginController {
             attributes.addFlashAttribute("message", "用户名和密码错误");
             return "redirect:/admin";
         }
+    }
+
+    @PostMapping("/register")
+    public String register(@RequestParam String username, @RequestParam String password,
+                        HttpSession session, RedirectAttributes attributes) {
+        User user = null;
+        try {
+            user = userService.register(username, password);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        session.setAttribute("user",user);
+        return "admin/login";
     }
 
     @GetMapping("/logout")

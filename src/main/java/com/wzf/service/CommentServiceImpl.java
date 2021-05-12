@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by limi on 2020/10/22.
+ * Created by Gene on 2020/10/22.
  */
 @Service
 public class CommentServiceImpl implements CommentService {
@@ -23,7 +23,9 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public List<Comment> listCommentByBlogId(Long blogId) {
+        //根据创建时间排序
         Sort sort = new Sort("createTime");
+
         List<Comment> comments = commentRepository.findByBlogIdAndParentCommentNull(blogId,sort);
         return eachComment(comments);
     }

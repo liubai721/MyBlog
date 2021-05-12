@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import javax.servlet.http.HttpSession;
 
 /**
- * Created by limi on 2020/10/22.
+ * Created by Gene on 2020/10/22.
  */
 @Controller
 public class CommentController {

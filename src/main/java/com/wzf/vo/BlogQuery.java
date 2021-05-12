@@ -1,7 +1,7 @@
 package com.wzf.vo;
 
 /**
- * Created by limi on 2020/10/20.
+ * Created by Gene on 2020/10/20.
  */
 public class BlogQuery {
 

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * Created by limi on 2020/10/13.
+ * Created by Gene on 2020/10/13.
  */
 @Controller
 public class IndexController {

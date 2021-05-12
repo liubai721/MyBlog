@@ -21,7 +21,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import javax.servlet.http.HttpSession;
 
 /**
- * Created by limi on 2020/10/15.
+ * Created by Gene on 2020/10/15.
  */
 @Controller
 @RequestMapping("/admin")

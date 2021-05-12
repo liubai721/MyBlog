@@ -1,4 +1,4 @@
-package com.lrm;
+package com.wzf;
 
 import com.wzf.dao.UserRepository;
 import org.junit.Test;

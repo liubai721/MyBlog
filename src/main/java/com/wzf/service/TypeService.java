@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 import java.util.List;
 
 /**
- * Created by limi on 2020/10/16.
+ * Created by Gene on 2020/10/16.
  */
 public interface TypeService {
 

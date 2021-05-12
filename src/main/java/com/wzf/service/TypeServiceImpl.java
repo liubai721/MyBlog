@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 /**
- * Created by limi on 2020/10/16.
+ * Created by Gene on 2020/10/16.
  */
 @Service
 public class TypeServiceImpl implements TypeService {
